@@ -1,9 +1,19 @@
-[gd_scene load_steps=2 format=3 uid="uid://bhe1wkn2wkhfb"]
+[gd_scene load_steps=3 format=3 uid="uid://bhe1wkn2wkhfb"]
 
-[ext_resource type="Texture2D" uid="uid://dtdstv6gancg4" path="res://art/Spritesheet/onlyObjects_default.png" id="1_hy0d1"]
+[ext_resource type="Texture2D" uid="uid://cheinik0j86d6" path="res://art/Spritesheet/allSprites_default.png" id="1_4o188"]
+[ext_resource type="Texture2D" uid="uid://cy2tivaxui4vo" path="res://art/Spritesheet/allSprites_retina.png" id="2_534l2"]
 
 [node name="player" type="Area2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_hy0d1")
-offset = Vector2(100, 100)
+position = Vector2(-41, -24)
+texture = ExtResource("1_4o188")
+region_enabled = true
+region_rect = Rect2(383, 192, 51, 61)
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(56, 56)
+scale = Vector2(0.577, 0.58)
+texture = ExtResource("2_534l2")
+region_enabled = true
+region_rect = Rect2(768, 0, 97, 96)
