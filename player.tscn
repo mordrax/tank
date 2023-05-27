@@ -1,3 +1,9 @@
-[gd_scene format=3 uid="uid://bhe1wkn2wkhfb"]
+[gd_scene load_steps=2 format=3 uid="uid://bhe1wkn2wkhfb"]
+
+[ext_resource type="Texture2D" uid="uid://dtdstv6gancg4" path="res://art/Spritesheet/onlyObjects_default.png" id="1_hy0d1"]
 
 [node name="player" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_hy0d1")
+offset = Vector2(100, 100)
