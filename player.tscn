@@ -11,9 +11,24 @@ texture = ExtResource("1_4o188")
 region_enabled = true
 region_rect = Rect2(383, 192, 51, 61)
 
-[node name="Sprite2D2" type="Sprite2D" parent="."]
-position = Vector2(56, 56)
+[node name="CustomTank" type="Sprite2D" parent="."]
+position = Vector2(191, 105)
 scale = Vector2(0.577, 0.58)
 texture = ExtResource("2_534l2")
 region_enabled = true
 region_rect = Rect2(768, 0, 97, 96)
+
+[node name="BigGun" type="Area2D" parent="CustomTank"]
+rotation = 2.19737
+
+[node name="Gunbase" type="Sprite2D" parent="CustomTank/BigGun"]
+position = Vector2(-1.31365e-06, 27.5862)
+texture = ExtResource("2_534l2")
+region_enabled = true
+region_rect = Rect2(1088, 0, 21, 56)
+
+[node name="GunHead" type="Sprite2D" parent="CustomTank/BigGun"]
+position = Vector2(-1.3113e-06, 84.4828)
+texture = ExtResource("2_534l2")
+region_enabled = true
+region_rect = Rect2(1026, 362, 32, 60)

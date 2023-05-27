@@ -22,3 +22,10 @@ window/size/viewport_height=1080
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/codeandweb.texturepacker/plugin.cfg")
+
+[input]
+
+up={
+"deadzone": 0.5,
+"events": []
+}
