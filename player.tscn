@@ -1,12 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://bhe1wkn2wkhfb"]
+[gd_scene load_steps=3 format=3 uid="uid://bhe1wkn2wkhfb"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_y0nm8"]
 [ext_resource type="Texture2D" uid="uid://cy2tivaxui4vo" path="res://art/Spritesheet/allSprites_retina.png" id="2_534l2"]
-[ext_resource type="Script" path="res://CustomTank.gd" id="3_y1c5j"]
 
 [node name="player" type="Area2D"]
 script = ExtResource("1_y0nm8")
-speed = null
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1.40159e-07, -6.8089e-07)
 
 [node name="CustomTank" type="Sprite2D" parent="."]
 position = Vector2(94, 93)
@@ -14,7 +15,6 @@ scale = Vector2(0.577, 0.58)
 texture = ExtResource("2_534l2")
 region_enabled = true
 region_rect = Rect2(768, 0, 97, 96)
-script = ExtResource("3_y1c5j")
 
 [node name="BigGun" type="Area2D" parent="CustomTank"]
 position = Vector2(3.44325, 5.15295)
