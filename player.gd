@@ -1,7 +1,5 @@
 extends Area2D
 
-func _ready():
-	position = Vector2(1000, 300)
 signal hit
 
 @export var speed=400
@@ -13,8 +11,7 @@ func _newgame():
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	screen_size = get_viewport_rect().size
-	hide()
-	position=pos
+	position=Vector2(1000,200)
 	
 	# Hello, this is a commit from Richie
 
