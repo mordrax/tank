@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://fr61x8l3qx2h"]
+
+[ext_resource type="Texture2D" uid="uid://cheinik0j86d6" path="res://art/Spritesheet/allSprites_default.png" id="1_5m1qw"]
+
+[node name="Sprite2D" type="Sprite2D"]
+position = Vector2(46.8214, 380.163)
+rotation = -2.19737
+scale = Vector2(1.7331, 1.72414)
+texture = ExtResource("1_5m1qw")
+region_enabled = true
+region_rect = Rect2(383, 192, 51, 61)
