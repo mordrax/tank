@@ -1,12 +1,15 @@
-[gd_scene load_steps=5 format=3 uid="uid://bhe1wkn2wkhfb"]
+[gd_scene load_steps=6 format=3 uid="uid://bhe1wkn2wkhfb"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_y0nm8"]
 [ext_resource type="Texture2D" uid="uid://cy2tivaxui4vo" path="res://art/Spritesheet/allSprites_retina.png" id="2_534l2"]
+[ext_resource type="PackedScene" uid="uid://docxhvf4h2ycc" path="res://custom_tank_2.tscn" id="2_ywtd7"]
 [ext_resource type="PackedScene" uid="uid://b2mvvsunnu0kr" path="res://big_gun.tscn" id="3_2060f"]
 [ext_resource type="Texture2D" uid="uid://cn4ieg61uchw3" path="res://art/PNG/Retina/bulletDark1_outline.png" id="4_lp2lo"]
 
 [node name="player" type="Area2D"]
 script = ExtResource("1_y0nm8")
+
+[node name="CustomTank2" parent="." instance=ExtResource("2_ywtd7")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1.40159e-07, -6.8089e-07)
@@ -25,5 +28,3 @@ scale = Vector2(1.7331, 1.72414)
 
 [node name="Sprite2D" type="Sprite2D" parent="CustomTank"]
 texture = ExtResource("4_lp2lo")
-
-[node name="CustomTank2" type="Sprite2D" parent="."]
