@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://b2mvvsunnu0kr"]
+
+[ext_resource type="Script" path="res://big_gun.gd" id="1_v15wd"]
+[ext_resource type="Texture2D" uid="uid://cy2tivaxui4vo" path="res://art/Spritesheet/allSprites_retina.png" id="2_71bbl"]
+
+[node name="big_gun" type="Node2D"]
+script = ExtResource("1_v15wd")
+
+[node name="Gunbase" type="Sprite2D" parent="."]
+position = Vector2(16, 2.08189e-12)
+rotation = -1.5708
+scale = Vector2(1.01262, 0.902653)
+texture = ExtResource("2_71bbl")
+region_enabled = true
+region_rect = Rect2(1088, 0, 21, 56)
+
+[node name="GunHead" type="Sprite2D" parent="."]
+position = Vector2(69, 2.08189e-12)
+rotation = -1.5708
+texture = ExtResource("2_71bbl")
+region_enabled = true
+region_rect = Rect2(1026, 362, 32, 60)
