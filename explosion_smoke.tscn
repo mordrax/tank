@@ -31,5 +31,5 @@ animations = [{
 
 [node name="explosion_smoke" type="AnimatedSprite2D"]
 sprite_frames = SubResource("SpriteFrames_0alb3")
-frame_progress = 0.0476182
+frame = 4
 speed_scale = 2.0
