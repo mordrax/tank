@@ -23,16 +23,15 @@ func _process(delta):
 		velocity.x += 1 # (1,0)
 	elif Input.is_action_pressed("left"):
 		velocity.x -= 1
-	if Input.is_action_pressed("up"):
-		velocity.y += 1
 	if Input.is_action_pressed("down"):
+		velocity.y += 1
+	if Input.is_action_pressed("up"):
 		velocity.y -= 1
 
-	
 			
-	position += velocity * delta
+	position += velocity * delta * 100
 	position.x = clamp(position.x, 0, screen_size.x)
-	position.y = clamp(position.y, 0, screen_size.y)	
+	position.y = clamp(position.y, 0, screen_size.y)
 
 	
 
