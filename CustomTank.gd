@@ -6,7 +6,9 @@ signal hit
 
 var screen_size
 
+
  
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	screen_size = get_viewport_rect().size
@@ -33,6 +35,7 @@ func _process(delta):
 
 func start(pos):
 	position = pos
+	pos Vector2.(pos.x,pos.y)
 	show()
 	
 

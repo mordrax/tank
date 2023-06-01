@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://w6kivkxgxerg"]
+[gd_scene load_steps=3 format=3 uid="uid://w6kivkxgxerg"]
 
 [ext_resource type="Texture2D" uid="uid://cheinik0j86d6" path="res://art/Spritesheet/allSprites_default.png" id="1_5m1qw"]
+[ext_resource type="Script" path="res://sprite_2d.gd" id="2_j4vkl"]
 
 [node name="Sprite2D" type="Sprite2D"]
 position = Vector2(46.8214, 380.163)
@@ -9,3 +10,4 @@ scale = Vector2(1.7331, 1.72414)
 texture = ExtResource("1_5m1qw")
 region_enabled = true
 region_rect = Rect2(383, 192, 51, 61)
+script = ExtResource("2_j4vkl")
