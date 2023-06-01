@@ -27,7 +27,7 @@ position = Vector2(-3.60813e-12, -3.58947e-12)
 rotation = -1.5708
 scale = Vector2(1.7331, 1.72414)
 
-[node name="Ammo" type="Sprite2D" parent="CustomTank"]
+[node name="ammo" type="Sprite2D" parent="CustomTank"]
 position = Vector2(159.445, -12.069)
 texture = ExtResource("4_lp2lo")
 script = ExtResource("6_3m4l5")

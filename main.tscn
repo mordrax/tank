@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://main.gd" id="1_5yrta"]
 [ext_resource type="PackedScene" uid="uid://bhe1wkn2wkhfb" path="res://player.tscn" id="1_li3sy"]
-[ext_resource type="PackedScene" path="res://ammo.tscn" id="2_y6i83"]
+[ext_resource type="PackedScene" uid="uid://dcg5srmy5n4vj" path="res://ammo.tscn" id="2_y6i83"]
 
 [node name="main" type="Node2D"]
 scale = Vector2(1, 1.01342)
