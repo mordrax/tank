@@ -1,11 +1,11 @@
 [gd_scene load_steps=4 format=3 uid="uid://dcg5srmy5n4vj"]
 
 [ext_resource type="Texture2D" uid="uid://cn4ieg61uchw3" path="res://art/PNG/Retina/bulletDark1_outline.png" id="1_5tlbi"]
-[ext_resource type="Script" path="res://ammo2.gd" id="2_ih6nx"]
+[ext_resource type="Script" path="res://bullet.gd" id="2_7dwxv"]
 [ext_resource type="PackedScene" uid="uid://5uh8i567dd4j" path="res://explosion.tscn" id="3_5oxnr"]
 
-[node name="ammo" type="Sprite2D"]
+[node name="bullet" type="Sprite2D"]
 texture = ExtResource("1_5tlbi")
-script = ExtResource("2_ih6nx")
+script = ExtResource("2_7dwxv")
 
 [node name="explosion" parent="." instance=ExtResource("3_5oxnr")]

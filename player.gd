@@ -3,7 +3,7 @@ extends Area2D
 signal hit
 signal shoot
 
-@export var speed=400
+@export var speed=600
 var screen_size
 
 func _newgame():
@@ -27,7 +27,6 @@ func _process(delta):
 	if Input.is_action_pressed("up"):
 		velocity.y -= 1
 	if Input.is_action_just_pressed("shoot"):
-		print(delta)
 		shoot.emit(position, $body/big_gun.rotation)
 
 	position += velocity * delta * 100

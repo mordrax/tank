@@ -2,14 +2,14 @@
 
 [ext_resource type="Script" path="res://main.gd" id="1_5yrta"]
 [ext_resource type="PackedScene" uid="uid://bhe1wkn2wkhfb" path="res://player.tscn" id="1_li3sy"]
-[ext_resource type="PackedScene" uid="uid://dcg5srmy5n4vj" path="res://ammo.tscn" id="2_y6i83"]
+[ext_resource type="PackedScene" uid="uid://dcg5srmy5n4vj" path="res://bullet.tscn" id="2_5w085"]
 
 [node name="main" type="Node2D"]
 scale = Vector2(1, 1.01342)
 script = ExtResource("1_5yrta")
-ammo_scene = ExtResource("2_y6i83")
+bullet_scene = ExtResource("2_5w085")
 
 [node name="player" parent="." instance=ExtResource("1_li3sy")]
-position = Vector2(1, -0.986729)
+position = Vector2(873, 478.577)
 
 [connection signal="shoot" from="player" to="." method="_on_player_shoot"]
