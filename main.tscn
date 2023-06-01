@@ -10,6 +10,6 @@ script = ExtResource("1_5yrta")
 ammo_scene = ExtResource("2_y6i83")
 
 [node name="player" parent="." instance=ExtResource("1_li3sy")]
-position = Vector2(500, 590)
+position = Vector2(1, -0.986729)
 
 [connection signal="shoot" from="player" to="." method="_on_player_shoot"]

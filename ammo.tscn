@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://ammo.gd" id="2_jbn0m"]
 [ext_resource type="PackedScene" uid="uid://5uh8i567dd4j" path="res://explosion.tscn" id="3_5oxnr"]
 
-[node name="Ammo" type="Sprite2D"]
+[node name="ammo" type="Sprite2D"]
 texture = ExtResource("1_5tlbi")
 script = ExtResource("2_jbn0m")
 

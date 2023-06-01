@@ -3,7 +3,7 @@ extends Sprite2D
 var screen_size
 @export var speed = 500
 # Called when the node enters the scene tree for the first time.
-func _ready():
+func _ready():	
 	$explosion.hide()
 	$explosion.animation = "default"
 	screen_size = get_viewport_rect().size
