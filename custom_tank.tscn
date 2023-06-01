@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://b0607cofwh4g6"]
+
+[ext_resource type="Texture2D" uid="uid://cy2tivaxui4vo" path="res://art/Spritesheet/allSprites_retina.png" id="1_evmh3"]
+[ext_resource type="Script" path="res://custom_tank.gd" id="2_rdmd6"]
+[ext_resource type="PackedScene" uid="uid://b2mvvsunnu0kr" path="res://big_gun.tscn" id="3_xbixg"]
+
+[node name="CustomTank" type="Sprite2D"]
+position = Vector2(2.08189e-12, 2.08189e-12)
+scale = Vector2(0.577, 0.58)
+texture = ExtResource("1_evmh3")
+region_enabled = true
+region_rect = Rect2(768, 0, 97, 96)
+script = ExtResource("2_rdmd6")
+
+[node name="big_gun" parent="." instance=ExtResource("3_xbixg")]
+position = Vector2(-3.60813e-12, -3.58947e-12)
+rotation = -1.5708
+scale = Vector2(1.7331, 1.72414)

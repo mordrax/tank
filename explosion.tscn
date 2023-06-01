@@ -31,5 +31,4 @@ animations = [{
 
 [node name="explosion" type="AnimatedSprite2D"]
 sprite_frames = SubResource("SpriteFrames_kco7o")
-frame_progress = 0.627357
-speed_scale = 2.0
+frame_progress = 0.499735
