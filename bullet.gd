@@ -32,3 +32,7 @@ func queue_destroy(sec):
 	await get_tree().create_timer(sec).timeout
 	queue_free()
 	
+
+
+func _on_explosion_animation_finished():
+	$explosion.stop() # Replace with function body.
