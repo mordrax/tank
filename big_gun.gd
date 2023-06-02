@@ -2,7 +2,7 @@ extends Node2D
 
 func _process(_delta):
 	var _velocity = Vector2.ZERO # The player's movement vector. (0,0)
-	self.look_at(get_global_mouse_position())
+	#self.look_at(get_global_mouse_position())
 	
 # Called when the node enters the scene tree for the first time.
 func _ready():

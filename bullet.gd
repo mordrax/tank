@@ -10,7 +10,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	var velocity = Vector2(cos(rotation-PI/2), sin(rotation-PI/2))
+	var velocity = from_angle_to_vector(rotation-PI/2)
 
 	position += velocity * delta * speed
 	position.x = clamp(position.x, 0, screen_size.x)
@@ -31,8 +31,6 @@ func _process(delta):
 func queue_destroy(sec):
 	await get_tree().create_timer(sec).timeout
 	queue_free()
-	
 
-
-func _on_explosion_animation_finished():
-	$explosion.stop() # Replace with function body.
+func from_angle_to_vector(radian: float):
+	Vector2(cos(radian), sin(radian))
