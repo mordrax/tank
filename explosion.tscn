@@ -24,7 +24,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("5_cw68o")
 }],
-"loop": true,
+"loop": false,
 "name": &"default",
 "speed": 5.0
 }]
@@ -32,3 +32,4 @@ animations = [{
 [node name="explosion" type="AnimatedSprite2D"]
 sprite_frames = SubResource("SpriteFrames_kco7o")
 frame_progress = 0.499735
+speed_scale = 0.99

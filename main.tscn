@@ -11,12 +11,13 @@ script = ExtResource("1_5yrta")
 bullet_scene = ExtResource("2_b4x4l")
 
 [node name="player" parent="." instance=ExtResource("1_li3sy")]
-position = Vector2(415, 484.498)
+position = Vector2(439.904, 525.411)
 rotation = 1.5708
 
 [node name="player2" parent="." instance=ExtResource("1_li3sy")]
-position = Vector2(415, 484.498)
+position = Vector2(1425.05, 541.122)
 rotation = -1.5708
 script = ExtResource("4_7j5qw")
 
+[connection signal="shoot" from="player" to="." method="_on_player_shoot"]
 [connection signal="shoot" from="player2" to="." method="_on_player_shoot"]
