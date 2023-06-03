@@ -7,15 +7,23 @@
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xf1nx"]
 height = 26.0
 
-[node name="bullet" type="Sprite2D"]
-texture = ExtResource("1_5tlbi")
+[node name="bullet" type="RigidBody2D"]
+collision_layer = 4
+collision_mask = 3
+linear_velocity = Vector2(2.08189e-12, 2.08189e-12)
 script = ExtResource("2_7dwxv")
 
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(2, 0)
+rotation = 1.5708
+texture = ExtResource("1_5tlbi")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(2.08189e-12, 3)
+position = Vector2(2.1684e-19, 2.1684e-19)
+rotation = 1.5708
 shape = SubResource("CapsuleShape2D_xf1nx")
 
 [node name="explosion" parent="." instance=ExtResource("3_5oxnr")]
-position = Vector2(2.08189e-12, 2.08189e-12)
+position = Vector2(1.0842e-19, 1.0842e-19)
 scale = Vector2(0.4, 0.4)
 frame_progress = 0.0

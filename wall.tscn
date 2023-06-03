@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=3 uid="uid://caxeljkrarj6p"]
+
+[ext_resource type="Texture2D" uid="uid://x2yun4g1qdc2" path="res://art/PNG/Retina/barricadeMetal.png" id="1_n13dy"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_om8bn"]
+absorbent = true
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_44sgd"]
+size = Vector2(57, 270)
+
+[node name="wall" type="StaticBody2D"]
+position = Vector2(2.08189e-12, 2.08189e-12)
+collision_mask = 6
+physics_material_override = SubResource("PhysicsMaterial_om8bn")
+
+[node name="BarricadeMetal" type="Sprite2D" parent="."]
+position = Vector2(2.08189e-12, 2.08189e-12)
+texture = ExtResource("1_n13dy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(4, 1)
+shape = SubResource("RectangleShape2D_44sgd")
+
+[node name="BarricadeMetal2" type="Sprite2D" parent="."]
+position = Vector2(5, 115)
+texture = ExtResource("1_n13dy")
+
+[node name="BarricadeMetal3" type="Sprite2D" parent="."]
+position = Vector2(-2, -112)
+texture = ExtResource("1_n13dy")
+
+[node name="BarricadeMetal4" type="Sprite2D" parent="."]
+position = Vector2(5, 59)
+texture = ExtResource("1_n13dy")
+
+[node name="BarricadeMetal5" type="Sprite2D" parent="."]
+position = Vector2(2, -54)
+texture = ExtResource("1_n13dy")

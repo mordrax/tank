@@ -1,4 +1,4 @@
-extends Sprite2D
+extends RigidBody2D
 
 var screen_size
 @export var speed = 500
@@ -13,26 +13,21 @@ func _process(delta):
 	var direction = Vector2(0,0) 
 	var velocity = from_angle_to_vector(rotation-PI/2)
 	
-	
-		
-	
-	
-
-	position += velocity * delta * speed
-	position.x = clamp(position.x, 0, screen_size.x)
-	position.y = clamp(position.y, 0, screen_size.y)
-
-	if position.x <= 0 || position.x >= screen_size.x:
-		print("explosion")
-		$explosion.show()
-		$explosion.play()
-		queue_destroy(1)
-		
-	elif position.y <= 0 || position.y >= screen_size.y:
-		print("explosion")
-		$explosion.show()
-		$explosion.play()
-		queue_destroy(1)
+#	position += velocity * delta * speed
+#	position.x = clamp(position.x, 0, screen_size.x)
+#	position.y = clamp(position.y, 0, screen_size.y)
+#
+#	if position.x <= 0 || position.x >= screen_size.x:
+#		print("explosion")
+#		$explosion.show()
+#		$explosion.play()
+#		queue_destroy(1)
+#
+#	elif position.y <= 0 || position.y >= screen_size.y:
+#		print("explosion")
+#		$explosion.show()
+#		$explosion.play()
+#		queue_destroy(1)
 	
 func queue_destroy(sec):
 	await get_tree().create_timer(sec).timeout

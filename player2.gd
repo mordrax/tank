@@ -1,4 +1,4 @@
-extends Area2D
+extends CharacterBody2D
 
 signal hit
 signal shoot
@@ -32,12 +32,8 @@ func _process(delta):
 	if Input.is_action_just_pressed("p2_shoot"):
 		shoot.emit(pos + position, rotation)
 	
-	
-	
-	
-	position += direction * delta * speed
-	position.x = clamp(position.x, 0, screen_size.x)
-	position.y = clamp(position.y, 0, screen_size.y)
+	var move_to = direction * delta * speed
+	move_and_collide(move_to)
 
 func from_angle_to_vector(radian: float):
 	return Vector2(cos(radian), sin(radian))
