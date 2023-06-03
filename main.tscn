@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://b65nee76rqbmi"]
+[gd_scene load_steps=5 format=3 uid="uid://b65nee76rqbmi"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_5yrta"]
 [ext_resource type="PackedScene" uid="uid://bhe1wkn2wkhfb" path="res://player.tscn" id="1_li3sy"]
 [ext_resource type="PackedScene" uid="uid://dcg5srmy5n4vj" path="res://bullet.tscn" id="2_b4x4l"]
+[ext_resource type="Script" path="res://player2.gd" id="4_7j5qw"]
 
 [node name="main" type="Node2D"]
 scale = Vector2(1, 1.01342)
@@ -13,4 +14,10 @@ bullet_scene = ExtResource("2_b4x4l")
 position = Vector2(415, 484.498)
 rotation = 1.5708
 
+[node name="player2" parent="." instance=ExtResource("1_li3sy")]
+position = Vector2(415, 484.498)
+rotation = -1.5708
+script = ExtResource("4_7j5qw")
+
 [connection signal="shoot" from="player" to="." method="_on_player_shoot"]
+[connection signal="shoot" from="player2" to="." method="_on_player_shoot"]

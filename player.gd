@@ -12,12 +12,13 @@ func _newgame():
 
 func _ready():
 	screen_size = get_viewport_rect().size
+	position = Vector2(480,540)
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	var pos
-	pos = from_angle_to_vector(rotation - PI/2) * 5
+	pos = from_angle_to_vector(rotation - PI/2) * 80
 	var direction = Vector2(0,0) # The player's movement vector. (0,0)
 	
 	if Input.is_action_pressed("right"):
