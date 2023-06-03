@@ -12,7 +12,6 @@ bullet_scene = ExtResource("2_b4x4l")
 
 [node name="player" parent="." instance=ExtResource("1_li3sy")]
 position = Vector2(439.904, 525.411)
-rotation = 1.5708
 collision_mask = 2
 
 [node name="player2" parent="." instance=ExtResource("1_li3sy")]

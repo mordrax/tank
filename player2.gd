@@ -18,7 +18,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	var pos
-	pos = from_angle_to_vector(rotation - PI/2) * 80
+	pos = from_angle_to_vector(rotation) * 80
 	var direction = Vector2(0,0) # The player's movement vector. (0,0)
 	
 	if Input.is_action_pressed("p2_right"):
@@ -26,11 +26,11 @@ func _process(delta):
 	elif Input.is_action_pressed("p2_left"):
 		rotate(-PI/75)
 	if Input.is_action_pressed("p2_down"):     
-		direction = from_angle_to_vector(rotation + PI/2)
+		direction = from_angle_to_vector(rotation - PI)
 	if Input.is_action_pressed("p2_up"):
-		direction = from_angle_to_vector(rotation - PI/2)
+		direction = from_angle_to_vector(rotation)
 	if Input.is_action_just_pressed("p2_shoot"):
-		shoot.emit(pos + position, rotation - PI/2)
+		shoot.emit(pos + position, rotation)
 	
 	
 	

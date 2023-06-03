@@ -19,7 +19,7 @@ func _ready():
 func _process(delta):
 	var watch_position = position
 	var pos
-	pos = from_angle_to_vector(rotation - PI/2) * 80
+	pos = from_angle_to_vector(rotation) * 80
 	var direction = Vector2(0,0) # The player's movement vector. (0,0)
 	
 	if Input.is_action_pressed("right"):
@@ -27,11 +27,11 @@ func _process(delta):
 	elif Input.is_action_pressed("left"):
 		rotate(-PI/75)
 	if Input.is_action_pressed("down"):     
-		direction = from_angle_to_vector(rotation + PI/2)
+		direction = from_angle_to_vector(rotation-PI)
 	if Input.is_action_pressed("up"):
-		direction = from_angle_to_vector(rotation - PI/2)
+		direction = from_angle_to_vector(rotation)
 	if Input.is_action_just_pressed("shoot"):
-		shoot.emit(pos + position, rotation - PI/2)
+		shoot.emit(pos + position, rotation)
 	
 	var move_to = direction * delta * speed
 	position = position + move_to
