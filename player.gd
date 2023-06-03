@@ -3,7 +3,7 @@ extends Area2D
 signal hit
 signal shoot
 
-@export var speed=600
+@export var speed=300
 var screen_size
 
 func _newgame():
@@ -16,18 +16,23 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	var pos
+	pos = from_angle_to_vector(rotation - PI/2) * 5
 	var direction = Vector2(0,0) # The player's movement vector. (0,0)
 	
 	if Input.is_action_pressed("right"):
-		rotate(PI/100) # (1,0)
+		rotate(PI/75) # (1,0)
 	elif Input.is_action_pressed("left"):
-		rotate(-PI/100)
-	if Input.is_action_pressed("down"):
+		rotate(-PI/75)
+	if Input.is_action_pressed("down"):     
 		direction = from_angle_to_vector(rotation + PI/2)
 	if Input.is_action_pressed("up"):
 		direction = from_angle_to_vector(rotation - PI/2)
 	if Input.is_action_just_pressed("shoot"):
-		shoot.emit(position, $body/big_gun.rotation)
+		shoot.emit(pos + position, rotation - PI/2)
+		
+	
+	
 	
 	position += direction * delta * speed
 	position.x = clamp(position.x, 0, screen_size.x)

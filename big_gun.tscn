@@ -7,7 +7,7 @@
 script = ExtResource("1_v15wd")
 
 [node name="Gunbase" type="Sprite2D" parent="."]
-position = Vector2(16, 2.08189e-12)
+position = Vector2(26, 1)
 rotation = -1.5708
 scale = Vector2(1.01262, 0.902653)
 texture = ExtResource("2_71bbl")
@@ -15,8 +15,12 @@ region_enabled = true
 region_rect = Rect2(1088, 0, 21, 56)
 
 [node name="GunHead" type="Sprite2D" parent="."]
-position = Vector2(69, 2.08189e-12)
+position = Vector2(77, 1)
 rotation = -1.5708
 texture = ExtResource("2_71bbl")
 region_enabled = true
 region_rect = Rect2(1026, 362, 32, 60)
+
+[node name="BulletStart" type="Node2D" parent="."]
+position = Vector2(80, 0)
+rotation = 3.89034

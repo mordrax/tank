@@ -10,7 +10,12 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	var velocity = from_angle_to_vector(rotation-PI/2)
+	var direction = Vector2(0,0) 
+	var velocity = from_angle_to_vector(rotation-PI/2)# 
+	
+		
+	
+	
 
 	position += velocity * delta * speed
 	position.x = clamp(position.x, 0, screen_size.x)
@@ -33,4 +38,4 @@ func queue_destroy(sec):
 	queue_free()
 
 func from_angle_to_vector(radian: float):
-	Vector2(cos(radian), sin(radian))
+	return Vector2(cos(radian), sin(radian))
