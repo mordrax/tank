@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://docxhvf4h2ycc"]
-
-[ext_resource type="Texture2D" uid="uid://kaep5iedy3ao" path="res://art/PNG/Retina/tank_bigRed.png" id="1_vnogw"]
-
-[node name="CustomTank2" type="Sprite2D"]
-position = Vector2(32, -32)
-scale = Vector2(0.58, 0.503)
-texture = ExtResource("1_vnogw")

@@ -5,7 +5,7 @@
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ml5fg"]
 radius = 38.0
-height = 114.0
+height = 138.544
 
 [node name="player" type="Area2D"]
 rotation = -0.0872665
@@ -16,3 +16,6 @@ position = Vector2(1, -26)
 shape = SubResource("CapsuleShape2D_ml5fg")
 
 [node name="body" parent="." instance=ExtResource("3_5juwm")]
+position = Vector2(0.765865, 14.1201)
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

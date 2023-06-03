@@ -11,7 +11,8 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	var direction = Vector2(0,0) 
-	var velocity = from_angle_to_vector(rotation-PI/2)# 
+	var velocity = from_angle_to_vector(rotation-PI/2)
+	
 	
 		
 	
