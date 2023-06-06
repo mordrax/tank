@@ -1,15 +1,99 @@
-[gd_scene load_steps=6 format=3 uid="uid://b65nee76rqbmi"]
+[gd_scene load_steps=7 format=3 uid="uid://b65nee76rqbmi"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_5yrta"]
 [ext_resource type="PackedScene" uid="uid://bhe1wkn2wkhfb" path="res://player.tscn" id="1_li3sy"]
 [ext_resource type="PackedScene" uid="uid://dcg5srmy5n4vj" path="res://bullet.tscn" id="2_b4x4l"]
 [ext_resource type="Script" path="res://player2.gd" id="4_7j5qw"]
+[ext_resource type="Script" path="res://wall.gd" id="5_6kj85"]
 [ext_resource type="PackedScene" uid="uid://caxeljkrarj6p" path="res://wall.tscn" id="5_gped7"]
 
 [node name="main" type="Node2D"]
 scale = Vector2(1, 1.01342)
 script = ExtResource("1_5yrta")
 bullet_scene = ExtResource("2_b4x4l")
+
+[node name="wall" parent="." instance=ExtResource("5_gped7")]
+position = Vector2(34, 428.253)
+scale = Vector2(1, 1)
+disable_mode = 1
+script = ExtResource("5_6kj85")
+
+[node name="StaticBody2D2" parent="wall" instance=ExtResource("5_gped7")]
+position = Vector2(1835, -15.7881)
+
+[node name="StaticBody2D3" parent="wall" instance=ExtResource("5_gped7")]
+position = Vector2(1836, 527.915)
+
+[node name="StaticBody2D5" parent="wall" instance=ExtResource("5_gped7")]
+position = Vector2(1837, 256.557)
+
+[node name="StaticBody2D4" parent="wall" instance=ExtResource("5_gped7")]
+position = Vector2(1834, -291.093)
+
+[node name="StaticBody2D6" parent="wall" instance=ExtResource("5_gped7")]
+position = Vector2(1, 543.703)
+
+[node name="StaticBody2D7" parent="wall" instance=ExtResource("5_gped7")]
+position = Vector2(2, 271.358)
+
+[node name="StaticBody2D" parent="wall" instance=ExtResource("5_gped7")]
+position = Vector2(152.997, 595.951)
+rotation = 1.57079
+
+[node name="StaticBody2D8" parent="wall" instance=ExtResource("5_gped7")]
+position = Vector2(-1, -276.292)
+
+[node name="StaticBody2D9" parent="wall" instance=ExtResource("5_gped7")]
+position = Vector2(428.305, 596.002)
+rotation = 1.5708
+
+[node name="StaticBody2D10" parent="wall" instance=ExtResource("5_gped7")]
+position = Vector2(703.611, 593.002)
+rotation = 1.57079
+
+[node name="StaticBody2D11" parent="wall" instance=ExtResource("5_gped7")]
+position = Vector2(978.919, 593.054)
+rotation = 1.5708
+
+[node name="StaticBody2D12" parent="wall" instance=ExtResource("5_gped7")]
+position = Vector2(1181.89, 598.042)
+rotation = 1.5708
+
+[node name="StaticBody2D13" parent="wall" instance=ExtResource("5_gped7")]
+position = Vector2(1457.19, 595.042)
+rotation = 1.57079
+
+[node name="StaticBody2D14" parent="wall" instance=ExtResource("5_gped7")]
+position = Vector2(1732.5, 595.093)
+rotation = 1.5708
+
+[node name="StaticBody2D15" parent="wall" instance=ExtResource("5_gped7")]
+position = Vector2(140.172, -393.009)
+rotation = 1.57079
+
+[node name="StaticBody2D16" parent="wall" instance=ExtResource("5_gped7")]
+position = Vector2(415.48, -392.958)
+rotation = 1.5708
+
+[node name="StaticBody2D17" parent="wall" instance=ExtResource("5_gped7")]
+position = Vector2(690.785, -395.958)
+rotation = 1.57079
+
+[node name="StaticBody2D18" parent="wall" instance=ExtResource("5_gped7")]
+position = Vector2(966.093, -395.907)
+rotation = 1.5708
+
+[node name="StaticBody2D19" parent="wall" instance=ExtResource("5_gped7")]
+position = Vector2(1169.06, -390.919)
+rotation = 1.5708
+
+[node name="StaticBody2D20" parent="wall" instance=ExtResource("5_gped7")]
+position = Vector2(1444.37, -393.918)
+rotation = 1.57079
+
+[node name="StaticBody2D21" parent="wall" instance=ExtResource("5_gped7")]
+position = Vector2(1719.67, -393.867)
+rotation = 1.5708
 
 [node name="player" parent="." instance=ExtResource("1_li3sy")]
 position = Vector2(540, 533.836)
@@ -19,85 +103,8 @@ position = Vector2(1171.4, 536.738)
 rotation = -1.5708
 script = ExtResource("4_7j5qw")
 
-[node name="StaticBody2D2" parent="." instance=ExtResource("5_gped7")]
-position = Vector2(34, 428.253)
+[node name="bullet" parent="." instance=ExtResource("2_b4x4l")]
 
-[node name="StaticBody2D2" parent="StaticBody2D2" instance=ExtResource("5_gped7")]
-position = Vector2(1835, -15.7881)
-
-[node name="StaticBody2D3" parent="StaticBody2D2" instance=ExtResource("5_gped7")]
-position = Vector2(1836, 527.915)
-
-[node name="StaticBody2D5" parent="StaticBody2D2" instance=ExtResource("5_gped7")]
-position = Vector2(1837, 256.557)
-
-[node name="StaticBody2D4" parent="StaticBody2D2" instance=ExtResource("5_gped7")]
-position = Vector2(1834, -291.093)
-
-[node name="StaticBody2D6" parent="StaticBody2D2" instance=ExtResource("5_gped7")]
-position = Vector2(1, 543.703)
-
-[node name="StaticBody2D7" parent="StaticBody2D2" instance=ExtResource("5_gped7")]
-position = Vector2(2, 271.358)
-
-[node name="StaticBody2D" parent="StaticBody2D2" instance=ExtResource("5_gped7")]
-position = Vector2(152.997, 595.951)
-rotation = 1.57079
-
-[node name="StaticBody2D8" parent="StaticBody2D2" instance=ExtResource("5_gped7")]
-position = Vector2(-1, -276.292)
-
-[node name="StaticBody2D9" parent="StaticBody2D2" instance=ExtResource("5_gped7")]
-position = Vector2(428.305, 596.002)
-rotation = 1.5708
-
-[node name="StaticBody2D10" parent="StaticBody2D2" instance=ExtResource("5_gped7")]
-position = Vector2(703.611, 593.002)
-rotation = 1.57079
-
-[node name="StaticBody2D11" parent="StaticBody2D2" instance=ExtResource("5_gped7")]
-position = Vector2(978.919, 593.054)
-rotation = 1.5708
-
-[node name="StaticBody2D12" parent="StaticBody2D2" instance=ExtResource("5_gped7")]
-position = Vector2(1181.89, 598.042)
-rotation = 1.5708
-
-[node name="StaticBody2D13" parent="StaticBody2D2" instance=ExtResource("5_gped7")]
-position = Vector2(1457.19, 595.042)
-rotation = 1.57079
-
-[node name="StaticBody2D14" parent="StaticBody2D2" instance=ExtResource("5_gped7")]
-position = Vector2(1732.5, 595.093)
-rotation = 1.5708
-
-[node name="StaticBody2D15" parent="StaticBody2D2" instance=ExtResource("5_gped7")]
-position = Vector2(140.172, -393.009)
-rotation = 1.57079
-
-[node name="StaticBody2D16" parent="StaticBody2D2" instance=ExtResource("5_gped7")]
-position = Vector2(415.48, -392.958)
-rotation = 1.5708
-
-[node name="StaticBody2D17" parent="StaticBody2D2" instance=ExtResource("5_gped7")]
-position = Vector2(690.785, -395.958)
-rotation = 1.57079
-
-[node name="StaticBody2D18" parent="StaticBody2D2" instance=ExtResource("5_gped7")]
-position = Vector2(966.093, -395.907)
-rotation = 1.5708
-
-[node name="StaticBody2D19" parent="StaticBody2D2" instance=ExtResource("5_gped7")]
-position = Vector2(1169.06, -390.919)
-rotation = 1.5708
-
-[node name="StaticBody2D20" parent="StaticBody2D2" instance=ExtResource("5_gped7")]
-position = Vector2(1444.37, -393.918)
-rotation = 1.57079
-
-[node name="StaticBody2D21" parent="StaticBody2D2" instance=ExtResource("5_gped7")]
-position = Vector2(1719.67, -393.867)
-rotation = 1.5708
-
+[connection signal="area_entered" from="wall" to="bullet" method="_on_wall_area_entered"]
 [connection signal="shoot" from="player" to="." method="_on_player_shoot"]
 [connection signal="shoot" from="player2" to="." method="_on_player_shoot"]

@@ -8,7 +8,7 @@ func _ready():
 	screen_size = get_viewport_rect().size
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	pass
 
 func _on_player_shoot(pos, rot):
@@ -21,3 +21,5 @@ func _on_player_shoot(pos, rot):
 
 func from_angle_to_vector(radian: float):
 	return Vector2(cos(radian), sin(radian))
+
+	

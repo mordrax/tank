@@ -27,3 +27,5 @@ shape = SubResource("CapsuleShape2D_xf1nx")
 position = Vector2(1.0842e-19, 1.0842e-19)
 scale = Vector2(0.4, 0.4)
 frame_progress = 0.0
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
