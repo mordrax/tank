@@ -6,9 +6,13 @@
 script = ExtResource("1_s425p")
 
 [node name="lifeP1" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 429.0
+offset_top = 16.0
+offset_right = 464.0
+offset_bottom = 50.0
 
 [node name="lifeP2" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 38.0
+offset_top = 12.0
+offset_right = 72.0
+offset_bottom = 42.0

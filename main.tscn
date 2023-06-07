@@ -4,8 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://bhe1wkn2wkhfb" path="res://player.tscn" id="1_li3sy"]
 [ext_resource type="PackedScene" uid="uid://dcg5srmy5n4vj" path="res://bullet.tscn" id="2_b4x4l"]
 [ext_resource type="Script" path="res://player2.gd" id="4_7j5qw"]
-[ext_resource type="Script" path="res://wall.gd" id="5_6kj85"]
 [ext_resource type="PackedScene" uid="uid://caxeljkrarj6p" path="res://wall.tscn" id="5_gped7"]
+[ext_resource type="PackedScene" uid="uid://nm70yb8tcl0m" path="res://HUD.tscn" id="6_mw7xe"]
 
 [node name="main" type="Node2D"]
 scale = Vector2(1, 1.01342)
@@ -14,9 +14,7 @@ bullet_scene = ExtResource("2_b4x4l")
 
 [node name="wall" parent="." instance=ExtResource("5_gped7")]
 position = Vector2(34, 428.253)
-scale = Vector2(1, 1)
 disable_mode = 1
-script = ExtResource("5_6kj85")
 
 [node name="StaticBody2D2" parent="wall" instance=ExtResource("5_gped7")]
 position = Vector2(1835, -15.7881)
@@ -56,15 +54,15 @@ position = Vector2(978.919, 593.054)
 rotation = 1.5708
 
 [node name="StaticBody2D12" parent="wall" instance=ExtResource("5_gped7")]
-position = Vector2(1181.89, 598.042)
+position = Vector2(1252.06, 593.974)
 rotation = 1.5708
 
 [node name="StaticBody2D13" parent="wall" instance=ExtResource("5_gped7")]
-position = Vector2(1457.19, 595.042)
+position = Vector2(1523.18, 592.82)
 rotation = 1.57079
 
 [node name="StaticBody2D14" parent="wall" instance=ExtResource("5_gped7")]
-position = Vector2(1732.5, 595.093)
+position = Vector2(1793, 591.147)
 rotation = 1.5708
 
 [node name="StaticBody2D15" parent="wall" instance=ExtResource("5_gped7")]
@@ -84,15 +82,15 @@ position = Vector2(966.093, -395.907)
 rotation = 1.5708
 
 [node name="StaticBody2D19" parent="wall" instance=ExtResource("5_gped7")]
-position = Vector2(1169.06, -390.919)
+position = Vector2(1240.05, -397.754)
 rotation = 1.5708
 
 [node name="StaticBody2D20" parent="wall" instance=ExtResource("5_gped7")]
-position = Vector2(1444.37, -393.918)
+position = Vector2(1515.05, -397.714)
 rotation = 1.57079
 
 [node name="StaticBody2D21" parent="wall" instance=ExtResource("5_gped7")]
-position = Vector2(1719.67, -393.867)
+position = Vector2(1788.08, -396.714)
 rotation = 1.5708
 
 [node name="player" parent="." instance=ExtResource("1_li3sy")]
@@ -103,8 +101,7 @@ position = Vector2(1171.4, 536.738)
 rotation = -1.5708
 script = ExtResource("4_7j5qw")
 
-[node name="bullet" parent="." instance=ExtResource("2_b4x4l")]
+[node name="HUD" parent="." instance=ExtResource("6_mw7xe")]
 
-[connection signal="area_entered" from="wall" to="bullet" method="_on_wall_area_entered"]
 [connection signal="shoot" from="player" to="." method="_on_player_shoot"]
 [connection signal="shoot" from="player2" to="." method="_on_player_shoot"]

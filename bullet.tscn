@@ -10,6 +10,8 @@ height = 26.0
 [node name="bullet" type="RigidBody2D"]
 collision_layer = 4
 collision_mask = 3
+max_contacts_reported = 1
+contact_monitor = true
 linear_velocity = Vector2(2.08189e-12, 2.08189e-12)
 script = ExtResource("2_7dwxv")
 
@@ -29,3 +31,4 @@ scale = Vector2(0.4, 0.4)
 frame_progress = 0.0
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_shape_entered" from="." to="." method="_on_body_shape_entered"]

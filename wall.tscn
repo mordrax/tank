@@ -1,13 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://caxeljkrarj6p"]
+[gd_scene load_steps=4 format=3 uid="uid://caxeljkrarj6p"]
 
+[ext_resource type="Script" path="res://wall.gd" id="1_blwat"]
 [ext_resource type="Texture2D" uid="uid://x2yun4g1qdc2" path="res://art/PNG/Retina/barricadeMetal.png" id="1_n13dy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_44sgd"]
 size = Vector2(57, 270)
 
-[node name="wall" type="Area2D"]
+[node name="wall" type="StaticBody2D"]
 position = Vector2(2.08189e-12, 2.08189e-12)
 collision_mask = 6
+script = ExtResource("1_blwat")
 
 [node name="BarricadeMetal" type="Sprite2D" parent="."]
 position = Vector2(5, -2.08189e-12)
