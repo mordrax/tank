@@ -20,7 +20,3 @@ rotation = -1.5708
 texture = ExtResource("2_71bbl")
 region_enabled = true
 region_rect = Rect2(1026, 362, 32, 60)
-
-[node name="BulletStart" type="Node2D" parent="."]
-position = Vector2(80, 0)
-rotation = 3.89034

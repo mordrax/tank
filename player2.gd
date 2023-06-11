@@ -22,9 +22,9 @@ func _process(delta):
 	var direction = Vector2(0,0) # The player's movement vector. (0,0)
 	
 	if Input.is_action_pressed("p2_right"):
-		rotate(PI/75) # (1,0)
+		rotate(PI/50) # (1,0)
 	elif Input.is_action_pressed("p2_left"):
-		rotate(-PI/75)
+		rotate(-PI/50)
 	if Input.is_action_pressed("p2_down"):     
 		direction = from_angle_to_vector(rotation - PI)
 	if Input.is_action_pressed("p2_up"):

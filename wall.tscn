@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://x2yun4g1qdc2" path="res://art/PNG/Retina/barricadeMetal.png" id="1_n13dy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_44sgd"]
-size = Vector2(57, 270)
+size = Vector2(44, 271)
 
 [node name="wall" type="StaticBody2D"]
 position = Vector2(2.08189e-12, 2.08189e-12)
@@ -16,7 +16,7 @@ position = Vector2(5, -2.08189e-12)
 texture = ExtResource("1_n13dy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(7, 1)
+position = Vector2(6, 0.5)
 shape = SubResource("RectangleShape2D_44sgd")
 
 [node name="BarricadeMetal2" type="Sprite2D" parent="."]

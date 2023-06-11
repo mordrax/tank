@@ -23,15 +23,16 @@ func _process(delta):
 	var direction = Vector2(0,0) # The player's movement vector. (0,0)
 	
 	if Input.is_action_pressed("right"):
-		rotate(PI/75) # (1,0)
+		rotate(PI/50) # (1,0)
 	elif Input.is_action_pressed("left"):
-		rotate(-PI/75)
+		rotate(-PI/50)
 	if Input.is_action_pressed("down"):     
 		direction = from_angle_to_vector(rotation-PI)
 	if Input.is_action_pressed("up"):
 		direction = from_angle_to_vector(rotation)
 	if Input.is_action_just_pressed("shoot"):
 		shoot.emit(pos + position, rotation)
+	
 	
 	var move_to = direction * delta * speed
 	move_and_collide(move_to)
@@ -43,8 +44,13 @@ func from_angle_to_vector(radian: float):
 
 
 func _on_area_entered(area):
-	life -= 1
-	speed = 50
+	var life1 = $HUD/lifeP1
+	#life1 = int(10)
+	#life1 -= 1
+	if $HUD/lifeP1 = str(10):
+		life1 = str(9)
+	
+	show()
 	$restart_player.start()
 
 

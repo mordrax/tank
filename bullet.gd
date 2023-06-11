@@ -2,8 +2,9 @@ extends RigidBody2D
 
 var screen_size
 @export var speed = 500
+signal hit
 # Called when the node enters the scene tree for the first time.
-func _ready():	
+func _ready():
 	$explosion.hide()
 	$explosion.animation = "default"
 	screen_size = get_viewport_rect().size
@@ -11,7 +12,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	var direction = Vector2(0,0) 
-	var velocity = from_angle_to_vector(rotation-PI/2)
+	var velocity = from_angle_to_vector(rotation-PI)
 	
 	position += velocity * delta * speed
 	position.x = clamp(position.x, 0, screen_size.x)
@@ -43,11 +44,11 @@ func _on_wall_area_entered():
 
 
 func _on_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
-#	freeze = true
-#	freeze_mode =RigidBody2D.FREEZE_MODE_STATIC
 	var zero_vector2 = Vector2(0,0)
 	set_linear_velocity(zero_vector2)
 	print("_on_body_shape_entered")
 	$explosion.show()
 	$explosion.play()
 	queue_destroy(1) # Replace with function body.
+	
+	
