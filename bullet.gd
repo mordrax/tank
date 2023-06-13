@@ -18,7 +18,6 @@ func _process(delta):
 	position.x = clamp(position.x, 0, screen_size.x)
 	position.y = clamp(position.y, 0, screen_size.y)
 
-	
 
 func queue_destroy(sec):
 	await get_tree().create_timer(sec).timeout
@@ -44,11 +43,20 @@ func _on_wall_area_entered():
 
 
 func _on_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
+	hit.emit()
 	var zero_vector2 = Vector2(0,0)
 	set_linear_velocity(zero_vector2)
 	print("_on_body_shape_entered")
 	$explosion.show()
 	$explosion.play()
-	queue_destroy(1) # Replace with function body.
+	queue_destroy(1) 
+	#life1 = int(10)
+	#life1 -= 1
+	
+	
+	
+	
+
+	# Replace with function body.
 	
 	

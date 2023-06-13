@@ -1,5 +1,4 @@
 extends CharacterBody2D
-
 signal hit
 signal shoot
 var life = 10
@@ -12,8 +11,7 @@ func _newgame():
 
 func _ready():
 	screen_size = get_viewport_rect().size
-	
-	
+
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -43,16 +41,65 @@ func from_angle_to_vector(radian: float):
 	return Vector2(cos(radian), sin(radian))
 
 
-func _on_area_entered(area):
-	var life1 = $HUD/lifeP1
-	#life1 = int(10)
-	#life1 -= 1
-	if $HUD/lifeP1 = str(10):
-		life1 = str(9)
-	
-	show()
-	$restart_player.start()
+#func _on_area_entered(area):
+#	#life1 = int(10)
+#	#life1 -= 1
+#	$HUD/lifeP1.text == str(10)
+#	show()
+#	if $HUD/lifeP1.text == str(10):
+#		$HUD/lifeP1.text = str(9)
+#	show()
+#	$restart_player.start()
 
 
 func _on_restart_player_timeout():
 	speed = 300
+
+
+func _on_area_2d_area_entered(area):
+	#life1 = int(10)
+	#life1 -= 1
+	$HUD/lifeP1.text == str(10)
+	show()
+	if $HUD/lifeP1.text == str(10):
+		$HUD/lifeP1.text = str(9)
+	show()
+	$restart_player.start()
+	
+ # Replace with function body.
+func _on_hit():
+	$HUD/lifeP1.text == str(10)
+	show()
+	if $HUD/lifeP1.text == str(10):
+		$HUD/lifeP1.text = str(9)
+	show()
+	$restart_player.start()
+
+
+
+func _on_area_2d_area_shape_entered(area_rid, area, area_shape_index, local_shape_index):
+	#life1 = int(10)
+	#life1 -= 1
+	$HUD/lifeP1.text == str(10)
+	show()
+	if $HUD/lifeP1.text == str(10):
+		$HUD/lifeP1.text = str(9)
+	show()
+	$restart_player.start()
+	
+ # Replace with function body.
+
+
+
+
+func _on_hud_score():
+	#life1 = int(10)
+	#life1 -= 1
+	$HUD/lifeP1.text == str(10)
+	show()
+	if $HUD/lifeP1.text == str(10):
+		$HUD/lifeP1.text = str(9)
+	show()
+	$restart_player.start()
+	
+ # Replace with function body.
