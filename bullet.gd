@@ -44,6 +44,7 @@ func _on_wall_area_entered():
 
 func _on_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
 	hit.emit()
+	body.on_hit()
 	var zero_vector2 = Vector2(0,0)
 	set_linear_velocity(zero_vector2)
 	print("_on_body_shape_entered")

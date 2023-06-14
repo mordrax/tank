@@ -39,3 +39,6 @@ func _process(delta):
 
 func from_angle_to_vector(radian: float):
 	return Vector2(cos(radian), sin(radian))
+
+func on_hit():
+	print("help, i've been hit!")
