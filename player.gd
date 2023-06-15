@@ -68,13 +68,9 @@ func _on_area_2d_area_entered(area):
 	
  # Replace with function body.
 func on_hit():
-	print("help, i've been hit!")
-	$HUD/lifeP1.text == str(10)
-	show()
-	if $HUD/lifeP1.text == str(10):
-		$HUD/lifeP1.text = str(9)
-	show()
-	$restart_player.start()
+	life -= 1
+	hit.emit(life)
+	print("help, i've been hit!")	
 
 
 

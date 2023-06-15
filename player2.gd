@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 signal hit
 signal shoot
+var life = 10
 
 @export var speed=300
 var screen_size
@@ -40,11 +41,7 @@ func _process(delta):
 func from_angle_to_vector(radian: float):
 	return Vector2(cos(radian), sin(radian))
 
-func on_help():
+func on_hit():
 	print("help, i've been hit!")
-	$HUD/lifeP1.text == str(10)
-	show()
-	if $HUD/lifeP1.text == str(10):
-		$HUD/lifeP1.text = str(9)
-	show()
-	$restart_player.start()
+	life -= 1
+	hit.emit(life)

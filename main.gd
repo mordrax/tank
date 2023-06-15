@@ -21,4 +21,8 @@ func _on_player_shoot(pos, rot):
 func from_angle_to_vector(radian: float):
 	return Vector2(cos(radian), sin(radian))
 
-	
+func _on_player_hit(life):
+	$HUD/lifeP1.set_text(str(life))
+
+func _on_player_2_hit(life):
+	$HUD/lifeP2.set_text(str(life))

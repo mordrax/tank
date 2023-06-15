@@ -11,3 +11,5 @@ func _process(delta):
 	pass
 
 
+func on_hit():
+	print("I'm a wall, i'm invincible, hahah!")

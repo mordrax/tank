@@ -1,7 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://bhe1wkn2wkhfb"]
+[gd_scene load_steps=6 format=3 uid="uid://bhe1wkn2wkhfb"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_y0nm8"]
-[ext_resource type="PackedScene" uid="uid://nm70yb8tcl0m" path="res://HUD.tscn" id="2_wrmrf"]
 [ext_resource type="PackedScene" uid="uid://b0607cofwh4g6" path="res://custom_tank.tscn" id="3_5juwm"]
 [ext_resource type="Script" path="res://Area2D.gd" id="4_ekcuc"]
 
@@ -17,8 +16,6 @@ height = 88.0
 collision_layer = 2
 collision_mask = 3
 script = ExtResource("1_y0nm8")
-
-[node name="HUD" parent="." instance=ExtResource("2_wrmrf")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(10, 0)
