@@ -67,7 +67,8 @@ func _on_area_2d_area_entered(area):
 	$restart_player.start()
 	
  # Replace with function body.
-func _on_hit():
+func on_hit():
+	print("help, i've been hit!")
 	$HUD/lifeP1.text == str(10)
 	show()
 	if $HUD/lifeP1.text == str(10):
@@ -88,18 +89,4 @@ func _on_area_2d_area_shape_entered(area_rid, area, area_shape_index, local_shap
 	$restart_player.start()
 	
  # Replace with function body.
-
-
-
-
-func _on_hud_score():
-	#life1 = int(10)
-	#life1 -= 1
-	$HUD/lifeP1.text == str(10)
-	show()
-	if $HUD/lifeP1.text == str(10):
-		$HUD/lifeP1.text = str(9)
-	show()
-	$restart_player.start()
-	
- # Replace with function body.
+ 
