@@ -4,6 +4,7 @@ signal shoot
 var life = 10
 @export var speed = 300
 var screen_size
+var HUD
 
 func _newgame():
 	pass
@@ -30,6 +31,7 @@ func _process(delta):
 		direction = from_angle_to_vector(rotation)
 	if Input.is_action_just_pressed("shoot"):
 		shoot.emit(pos + position, rotation)
+		
 	
 	
 	var move_to = direction * delta * speed
@@ -56,21 +58,15 @@ func _on_restart_player_timeout():
 	speed = 300
 
 
-func _on_area_2d_area_entered(area):
-	#life1 = int(10)
-	#life1 -= 1
-	$HUD/lifeP1.text == str(10)
-	show()
-	if $HUD/lifeP1.text == str(10):
-		$HUD/lifeP1.text = str(9)
-	show()
-	$restart_player.start()
-	
+
  # Replace with function body.
 func on_hit():
 	life -= 1
 	hit.emit(life)
-	print("help, i've been hit!")	
+	print("help, i've been hit!")
+	if life == 0:
+		
+	
 
 
 
@@ -86,3 +82,7 @@ func _on_area_2d_area_shape_entered(area_rid, area, area_shape_index, local_shap
 	
  # Replace with function body.
  
+
+
+func _on_restart_bullet_timeout():
+	pass # Replace with function body.

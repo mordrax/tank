@@ -16,3 +16,19 @@ offset_left = 1445.0
 offset_top = 175.0
 offset_right = 1499.0
 offset_bottom = 222.0
+
+[node name="label" type="Label" parent="."]
+offset_left = 41.0
+offset_top = 127.0
+offset_right = 817.0
+offset_bottom = 626.0
+scale = Vector2(15, 15)
+text = "Player 1 WINS!!!"
+
+[node name="label2" type="Label" parent="."]
+offset_left = 38.0
+offset_top = 127.0
+offset_right = 1936.0
+offset_bottom = 1839.0
+scale = Vector2(15, 15)
+text = "Player 2 WINS!!!"
