@@ -83,7 +83,6 @@ func _on_area_2d_area_shape_entered(area_rid, area, area_shape_index, local_shap
 	
  # Replace with function body.
  
-
-
+   
 func _on_restart_bullet_timeout():
-	ammo += 1
+		ammo += 1

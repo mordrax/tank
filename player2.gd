@@ -3,7 +3,7 @@ extends CharacterBody2D
 signal hit
 signal shoot
 var life = 10
-
+var ammo = 1
 @export var speed=300
 var screen_size
 
@@ -32,6 +32,8 @@ func _process(delta):
 		direction = from_angle_to_vector(rotation)
 	if Input.is_action_just_pressed("p2_shoot"):
 		shoot.emit(pos + position, rotation)
+		if ammo > 0:
+			shoot_bullet()
 	
 	var move_to = direction * delta * speed
 	move_and_collide(move_to)
@@ -40,8 +42,17 @@ func _process(delta):
 
 func from_angle_to_vector(radian: float):
 	return Vector2(cos(radian), sin(radian))
+	
+func shoot_bullet():
+	var pos = from_angle_to_vector(rotation) * 80
+	ammo -= 1
+	shoot.emit(pos + position, rotation)
+	$reload.start()
 
 func on_hit():
 	print("help, i've been hit!")
 	life -= 1
 	hit.emit(life)
+
+func _on_restart_bullet_timeout():
+	ammo += 1

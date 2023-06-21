@@ -7,6 +7,7 @@ func _ready():
 	screen_size = get_viewport_rect().size
 	$HUD/label.hide()
 	$HUD/label2.hide()
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
 	pass
@@ -33,11 +34,12 @@ func _on_player_hit(life):
 
 func _on_player_2_hit(life):
 	$HUD/lifeP2.set_text(str(life))
-	if life == (0):
+	if life == 0:
 		$HUD/label.show()
 		hide()
 		$HUD/lifeP1.hide()
 		$HUD/lifeP2.hide()
+	
 
 func on_player_no():
 	pass

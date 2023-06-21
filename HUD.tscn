@@ -6,16 +6,20 @@
 script = ExtResource("1_s425p")
 
 [node name="lifeP1" type="Label" parent="."]
-offset_left = 466.0
-offset_top = 193.0
-offset_right = 501.0
-offset_bottom = 227.0
+offset_left = 279.0
+offset_top = -22.0
+offset_right = 314.0
+offset_bottom = 10.0
+scale = Vector2(5, 5)
+text = "10"
 
 [node name="lifeP2" type="Label" parent="."]
-offset_left = 1445.0
-offset_top = 175.0
-offset_right = 1499.0
-offset_bottom = 222.0
+offset_left = 1797.0
+offset_top = -25.0
+offset_right = 1851.0
+offset_bottom = 19.0
+scale = Vector2(5, 5)
+text = "10"
 
 [node name="label" type="Label" parent="."]
 offset_left = 41.0
@@ -32,3 +36,18 @@ offset_right = 1936.0
 offset_bottom = 1839.0
 scale = Vector2(15, 15)
 text = "Player 2 WINS!!!"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 1.00003
+offset_top = -24.0
+offset_right = 57.0
+offset_bottom = 2.0
+scale = Vector2(5, 5)
+text = "Life P1:"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 1521.0
+offset_top = -26.0
+offset_right = 1577.0
+scale = Vector2(5, 5)
+text = "Life P2:"
