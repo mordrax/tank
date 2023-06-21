@@ -7,6 +7,10 @@ func _ready():
 	screen_size = get_viewport_rect().size
 	$HUD/label.hide()
 	$HUD/label2.hide()
+	$wall/StaticBody2D22.position = Vector2(1250,100)
+	$wall/StaticBody2D23.position = Vector2(640,100)
+	$wall/StaticBody2D24.position = Vector2(1420,-15)
+	$wall/StaticBody2D25.position = Vector2(485,210)
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):

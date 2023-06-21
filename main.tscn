@@ -109,7 +109,18 @@ position = Vector2(1788.08, -396.714)
 rotation = 1.5708
 
 [node name="StaticBody2D22" parent="wall" instance=ExtResource("5_gped7")]
-position = Vector2(956, 199.325)
+position = Vector2(635, 125.318)
+
+[node name="StaticBody2D23" parent="wall" instance=ExtResource("5_gped7")]
+position = Vector2(1835, -15.7881)
+
+[node name="StaticBody2D24" parent="wall" instance=ExtResource("5_gped7")]
+position = Vector2(1835, -15.7881)
+rotation = 1.5708
+
+[node name="StaticBody2D25" parent="wall" instance=ExtResource("5_gped7")]
+position = Vector2(1835, -15.7881)
+rotation = 1.5708
 
 [node name="player2" parent="." instance=ExtResource("1_li3sy")]
 position = Vector2(1171.4, 536.738)
