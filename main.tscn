@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://b65nee76rqbmi"]
+[gd_scene load_steps=10 format=3 uid="uid://b65nee76rqbmi"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_5yrta"]
 [ext_resource type="PackedScene" uid="uid://bhe1wkn2wkhfb" path="res://player.tscn" id="1_li3sy"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://nm70yb8tcl0m" path="res://HUD.tscn" id="6_mw7xe"]
 [ext_resource type="Texture2D" uid="uid://bfurqkv5xpmiy" path="res://art/PNG/Retina/tileGrass1.png" id="7_e5r6q"]
 [ext_resource type="Texture2D" uid="uid://bc277ebps3mvn" path="res://art/PNG/Retina/tileSand1.png" id="8_s6wnj"]
+[ext_resource type="Script" path="res://audio.gd" id="9_eyhn5"]
 
 [node name="main" type="Node2D"]
 scale = Vector2(1, 1.01342)
@@ -129,6 +130,13 @@ script = ExtResource("4_7j5qw")
 
 [node name="player" parent="." instance=ExtResource("1_li3sy")]
 position = Vector2(540, 533.836)
+
+[node name="audio" type="AudioStreamPlayer2D" parent="."]
+script = ExtResource("9_eyhn5")
+
+[node name="audioL" type="AudioListener2D" parent="."]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 
 [connection signal="hit" from="player2" to="." method="_on_player_2_hit"]
 [connection signal="shoot" from="player2" to="." method="_on_player_shoot"]
