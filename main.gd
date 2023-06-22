@@ -11,6 +11,8 @@ func _ready():
 	$wall/StaticBody2D23.position = Vector2(640,100)
 	$wall/StaticBody2D24.position = Vector2(1420,-15)
 	$wall/StaticBody2D25.position = Vector2(485,210)
+	var rng = RandomNumberGenerator.new()
+	var my_random_number = rng.randf_range(1, 2)
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):

@@ -52,7 +52,9 @@ func shoot_bullet():
 func on_hit():
 	print("help, i've been hit!")
 	life -= 1
+	$bullet.start()
 	hit.emit(life)
 
 func _on_restart_bullet_timeout():
-	ammo += 1
+	if ammo == 0:
+		ammo += 1
