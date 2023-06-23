@@ -66,7 +66,7 @@ func _on_restart_player_timeout():
 
  # Replace with function body.
 func on_hit():
-	life - 1
+	life -= 1
 	$bullet.start()
 	hit.emit(life)
 	print("help, i've been hit!")

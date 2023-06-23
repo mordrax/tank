@@ -4,6 +4,7 @@ var screen_size
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$MusicBackground.play(10)
 	screen_size = get_viewport_rect().size
 	$HUD/label.hide()
 	$HUD/label2.hide()
@@ -13,7 +14,6 @@ func _ready():
 	$wall/StaticBody2D25.position = Vector2(485,210)
 	var rng = RandomNumberGenerator.new()
 	var my_random_number = rng.randf_range(1, 2)
-	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
 	pass
